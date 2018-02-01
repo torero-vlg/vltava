@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>@ViewBag.Title</title>
+        <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/bootstrap-theme.min.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/DataTables-1.10.2/media/css/jquery.dataTables.min.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/leaflet/leaflet.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/leaflet.markercluster-1.0.6/MarkerCluster.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/leaflet.markercluster-1.0.6/MarkerCluster.Default.css")" rel="stylesheet" type="text/css" />
+        <link rel="icon" type="image/png" href="@Url.Content("~/Content/pic/favicon.ico")"/>
+
+        @{
+            if (Request.Cookies["style"] == null)
+            {
+                <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" type="text/css"/>
+            }
+            else
+            {
+                switch (Request.Cookies["style"].Value)
+                {
+                    case "BlackSpecial":
+                        <link href="@Url.Content("~/Content/blackspecial.css")" rel="stylesheet" type="text/css"/>
+                        break;
+                    case "WhiteSpecial":
+                        <link href="@Url.Content("~/Content/whitespecial.css")" rel="stylesheet" type="text/css" />
+                        break;
+                    default:
+                        <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" type="text/css"/>
+                        break;
+                }
+            }
+        }
+
+        <script src="/Scripts/require.js"></script>
+        <script src="/Scripts/main.js"></script>
+
+    </head>
+
+    <body>
+        @{
+            Html.RenderAction("ManagementMenu", "Navigation");
+        }
+        @{
+           // Html.RenderPartial("BannerPartialView"); 
+        }
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                @{
+                    Html.RenderAction("MainMenu", "Navigation");
+                }
+                @{
+                    //Html.RenderPartial("LowVisionPartialView");
+                }
+                <div class="content">
+                    @RenderBody()
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <span class="pull-right"><a href="@Url.Action("Index", "Home")">2017 © ГИС</a></span>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+        <script type="text/javascript">
+            require(['jquery', 'bootstrap', 'layout', 'app/@ViewContext.RouteData.Values["controller"]/@ViewContext.RouteData.Values["action"]'], function ($, bootstrap, layout, view) {
+                layout.Initialize();
+                view.Initialize();
+            });
+        </script>
+
+        @RenderSection("scripts", required: false)
+</body>
+</html>

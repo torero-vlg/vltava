@@ -1,0 +1,14 @@
+﻿@model string
+
+<div class="list-group">
+    @{
+
+        var gisFolder = Server.MapPath(Model);
+        var directory = new DirectoryInfo(gisFolder);
+        foreach (var file in directory.GetFiles().OrderByDescending(f => f.Name))
+        {
+            <a class="list-group-item" href="@Model.Replace("~/", "")@file.Name">@file.Name</a>
+        }
+    }
+
+</div>

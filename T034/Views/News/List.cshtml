@@ -1,0 +1,39 @@
+﻿@model IEnumerable<T034.ViewModel.NewsViewModel>
+
+@{
+    ViewBag.Title = "Новости";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.ActionLink("Добавить", "AddOrEdit", "News")
+
+<h2>Новости</h2>
+
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>Заголовок</th>
+            <th>Лента</th>
+            <th>Пользователь</th>
+            <th>Дата</th>
+            <th>Операции</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.OrderByDescending(n => n.LogDate))
+    {
+    <tr>
+        <td>@item.Title</td>
+        <td>@item.Newsline</td>
+        <td>@item.UserName</td>
+        <td>@item.LogDate</td>
+        <td>
+            @Html.ActionLink("Подробнее", "Index", new { id = item.Id }, new { @class = "mm"})
+            @Html.ActionLink("Редактировать", "AddOrEdit", new { id = item.Id })
+            @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+        </td>
+      </tr>
+    }
+    </tbody>
+</table>
+

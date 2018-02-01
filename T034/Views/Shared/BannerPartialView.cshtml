@@ -1,0 +1,28 @@
+﻿<div class="row">
+    <div class="col-md-12 banner">
+        @{
+
+            if (Request.Cookies["style"] == null)
+            {
+                <img src="../../Content/pic/banner.png" class="center-block" />
+            }
+            else
+            {
+                switch (Request.Cookies["style"].Value)
+                {
+                    case "BlackSpecial":
+                        <a href="@Url.Action("Set", "Style", new { styleName = "General" })">Обычная версия сайта</a>
+                                <a href="@Url.Action("Set", "Style", new { styleName = "WhiteSpecial" })">Инвертировать цвет</a>
+                        break;
+                    case "WhiteSpecial":
+                        <a href="@Url.Action("Set", "Style", new { styleName = "General" })">Обычная версия сайта</a>
+                                <a href="@Url.Action("Set", "Style", new { styleName = "BlackSpecial" })">Инвертировать цвет</a>
+                        break;
+                    default:
+                        <img src="../../Content/pic/banner.png" class="center-block" />
+                        break;
+                }
+            }
+        }
+    </div>
+</div>

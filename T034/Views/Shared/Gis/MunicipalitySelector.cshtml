@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Db.Dto.Common.IdNameDto<int>>
+
+<select class="form-control" id="MunicipalityId" name="MunicipalityId">
+    <option value="null">Не выбрано</option>
+    @foreach (var item in Model)
+    {
+        <option value="@item.Id">@item.Name</option>
+    }
+</select>
