@@ -26,14 +26,15 @@ namespace T034.Controllers
         public ActionResult AddOrEdit(int? id)
         {
             var model = new PageViewModel();
+            var menuItems = MenuItemService.Select();
+            model.MenuItems = Mapper.Map<ICollection<SelectListItem>>(menuItems);
+
             if (id.HasValue)
             {
                 var item = Db.Get<Page>(id.Value);
                 model = Mapper.Map(item, model);
 
                 //TODO дублирует код из FolderController
-                var menuItems = MenuItemService.Select();
-                model.MenuItems = Mapper.Map<ICollection<SelectListItem>>(menuItems);
 
                 var byUrl = MenuItemService.ByUrl(model.IndexUrl);
                 if (byUrl != null)
