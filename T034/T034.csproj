@@ -955,8 +955,6 @@
     <Content Include="Scripts\lib\leaflet-plugins-3.0.0\package.json" />
     <Content Include="Scripts\lib\leaflet-plugins-3.0.0\README.md" />
     <Content Include="Views\Shared\FilesPartialView.cshtml" />
-    <Content Include="Views\Shared\Gis\AgricultureSelector.cshtml" />
-    <Content Include="Views\Shared\Gis\MunicipalitySelector.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
