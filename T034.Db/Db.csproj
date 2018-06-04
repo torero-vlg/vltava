@@ -91,7 +91,11 @@
     <Compile Include="Api\FileService.cs" />
     <Compile Include="Api\UserService.cs" />
     <Compile Include="Api\SettingService.cs" />
+    <Compile Include="Dto\GuestBookItemDto.cs" />
+    <Compile Include="Entity\GuestBookItem.cs" />
+    <Compile Include="Mapping\GuestBookItemMap.cs" />
     <Compile Include="Profiles\AutoMapperConfiguration.cs" />
+    <Compile Include="Profiles\GuestBookItemProfile.cs" />
     <Compile Include="Profiles\NewsProfile.cs" />
     <Compile Include="Profiles\NewslineProfile.cs" />
     <Compile Include="Profiles\RoleProfile.cs" />
@@ -138,6 +142,7 @@
     <Compile Include="Services\Common\IService.cs" />
     <Compile Include="Services\Common\OperationResult.cs" />
     <Compile Include="Services\Common\StatusOperation.cs" />
+    <Compile Include="Services\GuestBookItemService.cs" />
     <Compile Include="Services\MenuItemService.cs" />
     <Compile Include="Services\NewslineService.cs" />
     <Compile Include="Utility\PredicateBuilder.cs" />
