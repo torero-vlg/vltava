@@ -27,7 +27,7 @@ namespace T034.Controllers
         {
             try
             {
-                //TODO MenuItemService
+                //TODO GuestBookItemService
                 var items = Db.Select<MenuItem>();
 
                 var model = new List<MenuItemViewModel>();
@@ -46,7 +46,7 @@ namespace T034.Controllers
         [Role("Administrator")]
         public ActionResult AddOrEdit(int? id)
         {
-            //TODO MenuItemService
+            //TODO GuestBookItemService
             var model = new MenuItemViewModel();
             if (id.HasValue)
             {
@@ -71,7 +71,7 @@ namespace T034.Controllers
         [Role("Administrator")]
         public ActionResult AddOrEdit(MenuItemViewModel model)
         {
-            //TODO MenuItemService
+            //TODO GuestBookItemService
             var item = new MenuItem();
             if (model.Id > 0)
             {
@@ -86,7 +86,7 @@ namespace T034.Controllers
 
         public ActionResult Index(int id)
         {
-            //TODO MenuItemService
+            //TODO GuestBookItemService
             var model = new MenuItemViewModel();
 
             var item = Db.Get<MenuItem>(id);

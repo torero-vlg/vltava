@@ -160,8 +160,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="Controllers\GuestBookController.cs" />
     <Compile Include="Profiles\AutoMapperConfig.cs" />
     <Compile Include="Profiles\FilesProfile.cs" />
+    <Compile Include="Profiles\GuestBookItemProfile.cs" />
     <Compile Include="Profiles\NewslineProfile.cs" />
     <Compile Include="Profiles\SettingProfile.cs" />
     <Compile Include="Profiles\MenuItemProfile.cs" />
@@ -212,6 +214,7 @@
     <Compile Include="ViewModel\FirstUserViewModel.cs" />
     <Compile Include="ViewModel\LoginInfoModel.cs" />
     <Compile Include="ViewModel\LogonViewModel.cs" />
+    <Compile Include="ViewModel\GuestBookItemViewModel.cs" />
     <Compile Include="ViewModel\NewslineViewModel.cs" />
     <Compile Include="ViewModel\SettingViewModel.cs" />
     <Compile Include="ViewModel\MenuItemViewModel.cs" />

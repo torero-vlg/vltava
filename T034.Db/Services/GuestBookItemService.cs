@@ -12,6 +12,7 @@ namespace Db.Services
         OperationResult Delete(object itemId);
         GuestBookItemDto Create(GuestBookItemDto dto);
         GuestBookItemDto Update(GuestBookItemDto dto);
+        GuestBookItemDto Get(object id);
     }
 
     public class GuestBookItemService : AbstractRepository<GuestBookItem, GuestBookItemDto, int>, IGuestBookItemService
