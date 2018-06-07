@@ -46,31 +46,37 @@ namespace T034.Controllers
         [Role("Administrator")]
         public ActionResult AddOrEdit(int? id)
         {
-            var dto = new GuestBookItemDto();
+            var model = new GuestBookItemViewModel();
             if (id.HasValue)
             {
-                dto = GuestBookItemService.Get(id.Value);
+                var dto = GuestBookItemService.Get(id.Value);
+                model = Mapper.Map(dto, model);
+
             }
 
-            return View(dto);
+            return View(model);
         }
 
         [Role("Administrator")]
-        public ActionResult AddOrEdit(GuestBookItemDto model)
+        public ActionResult AddOrEdit(GuestBookItemViewModel model)
         {
             try
             {
+                GuestBookItemDto dto;
+                dto = Mapper.Map<GuestBookItemDto>(model);
+
                 if (model.Id > 0)
                 {
-                    GuestBookItemService.Update(model);
+                    GuestBookItemService.Update(dto);
                 }
                 else
                 {
-                    GuestBookItemService.Create(model);
+                    GuestBookItemService.Create(dto);
                 }
             }
             catch (Exception ex)
             {
+                Logger.Fatal(ex);
                 return Json(new OperationResult { Status = StatusOperation.Error, Message = ex.Message });
             }
             return Json(new OperationResult { Status = StatusOperation.Success, Message = "Операция выполнена успешно" });
