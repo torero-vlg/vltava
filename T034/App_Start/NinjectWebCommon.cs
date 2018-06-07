@@ -18,6 +18,7 @@ namespace T034.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using Db.Services.Common;
 
     public static class NinjectWebCommon 
     {
@@ -81,7 +82,17 @@ namespace T034.App_Start
             kernel.Bind<Db.Services.Administration.IRoleService>().To<Db.Services.Administration.RoleService>().InRequestScope();
             kernel.Bind<IMenuItemService>().To<MenuItemService>().InRequestScope();
             kernel.Bind<INewslineService>().To<NewslineService>().InRequestScope();
-            kernel.Bind<IGuestBookItemService>().To<GuestBookItemService>().InRequestScope();
+
+            var emailConfig = new EmailConfig
+            {
+                From = ConfigurationManager.AppSettings["EmailFrom"],
+                To = ConfigurationManager.AppSettings["EmailTo"],
+                UserName = ConfigurationManager.AppSettings["EmailUserName"],
+                Password = ConfigurationManager.AppSettings["EmailPassword"],
+            };
+            kernel.Bind<IGuestBookItemService>().To<GuestBookItemService>()
+                .InRequestScope()
+                .WithConstructorArgument("emailConfig", emailConfig);
 
         }
 

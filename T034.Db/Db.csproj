@@ -92,6 +92,7 @@
     <Compile Include="Api\UserService.cs" />
     <Compile Include="Api\SettingService.cs" />
     <Compile Include="Dto\GuestBookItemDto.cs" />
+    <Compile Include="Dto\SendMessageDto.cs" />
     <Compile Include="Entity\GuestBookItem.cs" />
     <Compile Include="Mapping\GuestBookItemMap.cs" />
     <Compile Include="Profiles\AutoMapperConfiguration.cs" />
@@ -139,6 +140,7 @@
     <Compile Include="Services\Administration\RoleService.cs" />
     <Compile Include="Services\Administration\UserService.cs" />
     <Compile Include="Services\Common\AbstractRepository.cs" />
+    <Compile Include="Services\Common\EmailConfig.cs" />
     <Compile Include="Services\Common\IService.cs" />
     <Compile Include="Services\Common\OperationResult.cs" />
     <Compile Include="Services\Common\StatusOperation.cs" />
