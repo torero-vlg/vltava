@@ -422,6 +422,8 @@
     <Content Include="Scripts\app\folder\index.js" />
     <Content Include="Scripts\app\folder\edit.js" />
     <Content Include="Scripts\app\account\logon.js" />
+    <Content Include="Scripts\app\guestbook\addoredit.js" />
+    <Content Include="Scripts\app\guestbook\list.js" />
     <Content Include="Scripts\app\newsline\addoredit.js" />
     <Content Include="Scripts\app\newsline\index.js" />
     <Content Include="Scripts\app\newsline\list.js" />
@@ -958,6 +960,8 @@
     <Content Include="Scripts\lib\leaflet-plugins-3.0.0\package.json" />
     <Content Include="Scripts\lib\leaflet-plugins-3.0.0\README.md" />
     <Content Include="Views\Shared\FilesPartialView.cshtml" />
+    <Content Include="Views\GuestBook\AddOrEdit.cshtml" />
+    <Content Include="Views\GuestBook\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
