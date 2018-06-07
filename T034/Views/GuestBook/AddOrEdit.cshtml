@@ -6,6 +6,13 @@
 }
 
 <div class="control-group warning">
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.IsShow)
+            @Html.LabelFor(m => m.IsShow)
+        </label>
+    </div>
+
     <label class="control-label">@Html.LabelFor(m => m.Author)</label>
     <div>
         @Html.TextBoxFor(m => m.Author, new { @class = "form-control" })

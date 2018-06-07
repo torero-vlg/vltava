@@ -13,6 +13,7 @@ namespace Db.Mapping
             Map(p => p.Contact);
             Map(p => p.Date);
             Map(p => p.Message);
+            Map(p => p.IsShow);
 
             References(p => p.Parent).Column("ParentId")
                 .Not.LazyLoad();

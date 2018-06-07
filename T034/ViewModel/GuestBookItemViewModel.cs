@@ -19,5 +19,8 @@ namespace T034.ViewModel
 
         [Display(Name = "Сообщение")]
         public string Message { get; set; }
+
+        [Display(Name = "Показать")]
+        public bool IsShow { get; set; }
     }
 }

@@ -14,6 +14,7 @@
             <th>Дата</th>
             <th>Автор</th>
             <th>Контакт</th>
+            <th>Показать</th>
             <th>Операции</th>
         </tr>
     </thead>
@@ -24,6 +25,12 @@
         <td>@item.Date</td>
         <td>@item.Author</td>
         <td>@item.Contact</td>
+        <td>
+            @if (item.IsShow)
+            {
+                <i class="fa fa-check fa-lg" aria-hidden="true"></i>
+            }
+        </td>
         <td>
             <a href="@Url.Action("AddOrEdit", new { id = item.Id})" title="Редактировать"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
             <a href="@Url.Action("Delete", new { menuItemId = item.Id})" title="Удалить"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></a>

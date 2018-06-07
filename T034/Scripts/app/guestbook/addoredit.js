@@ -9,8 +9,9 @@
                 Id: $('#Id').val(),
                 Contact: $('#Contact').val(),
                 Date: $('#Date').val(),
-                Message: $('#Message').val()
-            }
+                Message: $('#Message').val(),
+                IsShow: $('#IsShow').is(':checked')
+    }
         })
         .complete(function (data) {
             layout.showResult(data);

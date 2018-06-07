@@ -32,6 +32,11 @@ namespace Db.Entity
         /// </summary>
         public virtual string Message { get; set; }
 
+        /// <summary>
+        /// Отображать или нет
+        /// </summary>
+        public virtual bool IsShow { get; set; }
+
         public override string ToString()
         {
             return Message;

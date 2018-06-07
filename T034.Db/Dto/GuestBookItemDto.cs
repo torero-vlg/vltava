@@ -35,6 +35,11 @@ namespace Db.Dto
         /// </summary>
         public  string Message { get; set; }
 
+        /// <summary>
+        /// Отображать или нет
+        /// </summary>
+        public bool IsShow { get; set; }
+
         public override string ToString()
         {
             return Message;
