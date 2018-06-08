@@ -3,6 +3,11 @@
     public class EmailConfig
     {
         /// <summary>
+        /// Сервер
+        /// </summary>
+        public string Server { get; set; }
+
+        /// <summary>
         /// Адресат
         /// </summary>
         public string To { get; set; }

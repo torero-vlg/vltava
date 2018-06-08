@@ -146,6 +146,7 @@
     <Compile Include="Services\Common\StatusOperation.cs" />
     <Compile Include="Services\GuestBookItemService.cs" />
     <Compile Include="Services\MenuItemService.cs" />
+    <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\NewslineService.cs" />
     <Compile Include="Utility\PredicateBuilder.cs" />
   </ItemGroup>

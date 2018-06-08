@@ -10,6 +10,7 @@ namespace T034.Profiles
         {
             CreateMap<GuestBookItemDto, GuestBookItemViewModel>();
             CreateMap<GuestBookItemViewModel, GuestBookItemDto>();
+            CreateMap<GuestBookItemViewModel, SendMessageDto>();
         }
     }
 }

@@ -416,6 +416,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="README.jQuery.vsdoc.txt" />
+    <Content Include="Scripts\app\guestbook\send.js" />
     <Content Include="Scripts\app\layout.js" />
     <Content Include="Scripts\app\home\sites.js" />
     <Content Include="Scripts\app\home\index.js" />
@@ -962,6 +963,7 @@
     <Content Include="Views\Shared\FilesPartialView.cshtml" />
     <Content Include="Views\GuestBook\AddOrEdit.cshtml" />
     <Content Include="Views\GuestBook\List.cshtml" />
+    <Content Include="Views\GuestBook\Send.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />

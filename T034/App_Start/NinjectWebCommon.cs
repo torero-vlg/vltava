@@ -90,10 +90,11 @@ namespace T034.App_Start
                 UserName = ConfigurationManager.AppSettings["EmailUserName"],
                 Password = ConfigurationManager.AppSettings["EmailPassword"],
             };
-            kernel.Bind<IGuestBookItemService>().To<GuestBookItemService>()
+            kernel.Bind<IEmailService>().To<EmailService>()
                 .InRequestScope()
                 .WithConstructorArgument("emailConfig", emailConfig);
 
+            kernel.Bind<IGuestBookItemService>().To<GuestBookItemService>().InRequestScope();
         }
 
         private static string ConnectionString { get { return ConfigurationManager.ConnectionStrings["DatabaseFile"].ConnectionString; } }

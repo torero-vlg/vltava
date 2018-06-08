@@ -101,5 +101,27 @@ namespace T034.Controllers
                 return View("ServerError", (object)"Получение списка");
             }
         }
+
+        [HttpGet]
+        public ActionResult Send()
+        {
+            var model = new GuestBookItemViewModel();
+
+            return View(model);
+        }
+
+        public ActionResult Send(SendMessageDto dto)
+        {
+            try
+            {
+                GuestBookItemService.SendMessage(dto);
+            }
+            catch (Exception ex)
+            {
+                Logger.Fatal(ex);
+                return Json(new OperationResult { Status = StatusOperation.Error, Message = ex.Message });
+            }
+            return Json(new OperationResult { Status = StatusOperation.Success, Message = "Операция выполнена успешно" });
+        }
     }
 }

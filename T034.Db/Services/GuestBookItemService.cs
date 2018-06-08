@@ -23,10 +23,10 @@ namespace Db.Services
 
     public class GuestBookItemService : AbstractRepository<GuestBookItem, GuestBookItemDto, int>, IGuestBookItemService
     {
-        private readonly EmailConfig _emailConfig;
-        public GuestBookItemService(EmailConfig emailConfig)
+        private readonly IEmailService _emailService;
+        public GuestBookItemService(IEmailService emailService)
         {
-            _emailConfig = emailConfig;
+            _emailService = emailService;
         }
 
         public new OperationResult Delete(object itemId)
@@ -45,36 +45,17 @@ namespace Db.Services
             {
                 Author = sendMessageDto.Author,
                 Contact = sendMessageDto.Contact,
-                Date = sendMessageDto.Date,
+                Date = DateTime.Now,
                 IsShow = false,
                 Message = sendMessageDto.Message               
             };
             var result = Db.SaveOrUpdate(entity);
 
+            _emailService.SendEmail("Новая запись", sendMessageDto.Message);
 
             return Mapper.Map<GuestBookItemDto>(entity);
         }
 
-        private void SendEmail(string server)
-        {
-            string to = _emailConfig.To;
-            string from = _emailConfig.From;
-            MailMessage message = new MailMessage(from, to);
-            message.Subject = "Using the new SMTP client.";
-            message.Body = @"Using this new feature, you can send an e-mail message from an application very easily.";
-            SmtpClient client = new SmtpClient(server);
-            client.UseDefaultCredentials = false;
-            client.Credentials = new NetworkCredential(_emailConfig.UserName, _emailConfig.Password);
 
-            try
-            {
-                client.Send(message);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception caught in CreateTestMessage2(): {0}",
-                            ex.ToString());
-            }
-        }
     }
 }
