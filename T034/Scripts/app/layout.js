@@ -10,6 +10,21 @@
                 $(this).hide();
             });
 
+            $('#first_load').show();
+            $('#scroll_menu').hide();
+
+            $(document).on("scroll", function () {
+                if ($(document).scrollTop() > 100) {
+                    $('#first_load').hide();
+                    $('#scroll_menu').show();
+                  //  $("header").addClass("shrink");
+                }
+                else {
+                    $('#first_load').show();
+                    $('#scroll_menu').hide();
+                }
+            });
+
         },
 
         showResult: function (data) {

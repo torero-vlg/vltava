@@ -50,43 +50,44 @@
                 <div class="col-md-12">
                     <a name="up"></a>
                     <!-- Баннер + логотип + меню для первоначальной загрузки сайта -->
-                    <div class="banner">
-                        <img src="@Url.Content("~/Content/pic/banner_full.png")" alt="Баннер">
+                    <div id="first_load">
+                        <div class="banner">
+                            <img src="@Url.Content("~/Content/pic/banner_full.png")" alt="Баннер">
+                        </div>
+                        <div class="mmenu">
+                            <div class="btn-menu">
+                                <a href="#about" class="main-menu">О нас</a>
+                            </div>
+                            <div class="btn-menu">
+                                <a href="#foodmenu" class="main-menu">Меню</a>
+                            </div>
+                            <div class="btn-menu">
+                                <a href="#news" class="main-menu">Новости</a>
+                            </div>
+                            <div class="btn-menu">
+                                <a href="#guests" class="main-menu">Гостевая книга</a>
+                            </div>
+                            <div class="btn-menu">
+                                <a href="#gallery" class="main-menu">Фотогалерея</a>
+                            </div>
+                            <div class="btn-menu">
+                                <a href="#delivery" class="main-menu">Доставка</a>
+                            </div>
+                            <div class="btn-menu">
+                                <a href="#businesslunch" class="main-menu">Бизнес-ланч</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mmenu">
-                        <div class="btn-menu">
-                            <a href="#about" class="main-menu">О нас</a>
-                        </div>
-                        <div class="btn-menu">
-                            <a href="#foodmenu" class="main-menu">Меню</a>
-                        </div>
-                        <div class="btn-menu">
-                            <a href="#news" class="main-menu">Новости</a>
-                        </div>
-                        <div class="btn-menu">
-                            <a href="#guests" class="main-menu">Гостевая книга</a>
-                        </div>
-                        <div class="btn-menu">
-                            <a href="#gallery" class="main-menu">Фотогалерея</a>
-                        </div>
-                        <div class="btn-menu">
-                            <a href="#delivery" class="main-menu">Доставка</a>
-                        </div>
-                        <!-- <div class="btn-menu"><a href="#contacts" class="main-menu">Контакты</a></div> -->
-                        <div class="btn-menu">
-                            <a href="#businesslunch" class="main-menu">Бизнес-ланч</a>
-                        </div>
+                    <div class="nobannermenu" id="scroll_menu">
+                        <div class="btn-menu"><a href="#about" class="main-menu">О нас</a></div>
+                        <div class="btn-menu"><a href="#foodmenu" class="main-menu">Меню</a></div>
+                        <div class="btn-menu"><a href="#news" class="main-menu">Новости</a></div>
+                        <div class="btn-menu"><a href="#guests" class="main-menu">Гостевая книга</a></div>
+                        <div class="btn-menu"><a href="#gallery" class="main-menu">Фотогалерея</a></div>
+                        <div class="btn-menu"><a href="#delivery" class="main-menu">Доставка</a></div>
+                        <div class="btn-menu"><a href="#businesslunch" class="main-menu">Бизнес-ланч</a></div>
                     </div>
-                    <!-- <div class="nobannermenu">
-            <div class="btn-menu"><a href="#about" class="main-menu">О нас</a></div>
-            <div class="btn-menu"><a href="#foodmenu" class="main-menu">Меню</a></div>
-            <div class="btn-menu"><a href="#news" class="main-menu">Новости</a></div>
-            <div class="btn-menu"><a href="#guests" class="main-menu">Гостевая книга</a></div>
-            <div class="btn-menu"><a href="#gallery" class="main-menu">Фотогалерея</a></div>
-            <div class="btn-menu"><a href="#delivery" class="main-menu">Доставка</a></div>
-            <div class="btn-menu"><a href="#businesslunch" class="main-menu">Бизнес-ланч</a></div>
-        </div>
-        -->
+        
 
                     <div role="alert" class="alert alert-danger" id="errorContainer" style="display: none"></div>
                     <div role="alert" class="alert alert-success" id="successContainer" style="display: none"></div>
