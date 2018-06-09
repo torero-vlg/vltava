@@ -1,1 +1,511 @@
-﻿
+/*@font-face {
+  font-family: 'Tolstoy'; /* тут зададим синоним, который используем далее */
+/*  src: url("/../fonts/a_BosaNovaCpsRgh Regular.ttf"); /* это случай для IE, как получить .eot - cм. ниже*/
+ 
+/* для прочих (нормальных, дружащих со спецификациями) браузеров */
+ /* src: local("a_BosaNovaCpsRgh Regular"), local("a_BosaNovaCpsRgh Regular"), /* пытаемся угадать локальное имя
+шрифта, чтобы браузер мог подгрузить его не скачивая; в противном случае придется качать */
+/*    url(/../fonts/a_BosaNovaCpsRgh Regular.ttf) format("truetype"); /* указываем где лежит шрифт и его тип*/
+/*}*/
+/* а это пример использования, указываем описанный выше синоним первым в списке */
+
+@font-face {	
+  font-family: 'TolstoyC'; 
+  src: url('/../fonts/TolstoyC.eot');
+  src: local('TolstoyC'),
+  url('/../fonts/TolstoyC.woff') format('woff'),
+  url('/../fonts/TolstoyC.ttf') format('truetype'),
+  url('/../fonts/TolstoyC.svg#TolstoyC') format('svg');
+}
+
+@font-face {
+		font-family: TolstoyC !important;
+		src: url('/../fonts/tolstoyc-webfont.woff') !important;
+		font-style: normal;
+		font-weight: normal;
+}
+
+
+body
+{
+    font-size: .85em;
+    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
+	color: #232323;
+    background: url("pic/background.jpg") fixed no-repeat !important;
+	align: middle;
+}
+
+.container
+{
+    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
+    width: 1600px; 
+	padding: 0 0 0 0;
+/*border: 1px solid #fff;*/
+}
+
+.banner
+{
+    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
+    width: 1200px;
+	height: 200px;
+	padding: 0 0 0 0;
+/*border: 1px solid #fff;*/
+}
+
+.main_img
+{
+    width: 1150px;
+	height: 767px;
+	padding: 0 0 0 0;
+	margin-top: -20px;
+/*border: 1px solid #fff;*/
+}
+
+
+.mmenu
+{
+    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
+    color: #f3de9d;
+    text-align: justify;
+	width: 1150px;
+    height: 45px;
+	padding: 5px 0 5px 250px;
+    background: url("pic/line_menu_1150.png") repeat scroll 0 0;
+	margin-bottom: 20px;
+}
+
+.nobannermenu
+{
+    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
+    color: #f3de9d;
+    text-align: justify;
+	width: 1150px;
+    height: 110px;
+	padding: 40px 0 5px 250px;
+    background: url("pic/banner_sm_1150.png") repeat scroll 0 0;
+	margin-bottom: 20px;
+}
+
+.menu
+{
+    color: #f3de9d;
+    text-align: justify;
+	width: 1080px;
+    height: 45px;
+    position: relative; /* Абсолютное позиционирование */
+    left: 270px; /* Положение от нижнего края */
+    border: 1px solid #fff;
+	margin-bottom: 20px;
+    background: url("pic/line_menu.png") repeat scroll 0 0 #fff;
+}
+
+.btn-menu
+{
+    font-size: 18px;
+    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
+    color: #f3de9d;
+    text-align: center;
+	float: left;
+    background: rgba (255, 255, 255, 0.5);
+    filter: alpha(opacity=60);
+    /* IE */
+    -moz-opacity: 0.6;
+    /* Mozilla */
+    opacity: 0.6;
+}
+
+.headerlgt
+{
+    font-size: 30px;
+    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
+    color: #000000;
+    background-color: #c6b37e;
+    background: url("pic/line_lgt.png") repeat scroll 0 0 #fff;
+	text-align: justify;
+	text-indent: 100px;
+    width: 1150px;
+    height: 70px;
+    padding: 15px 10px 10px 10px;
+	opacity: 0.75;
+}
+
+.headergrn
+{
+    font-size: 30px;
+    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
+    color: #d3b046;
+    background-color: #003407;
+    background: url("pic/line_grn.png") repeat scroll 0 0 #fff;
+	text-align: justify;
+	text-indent: 100px;
+    width: 1150px;
+    height: 70px;
+    padding: 15px 10px 10px 10px;
+}
+
+.text
+{
+    font-size: 13px;
+    font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
+    color: #bdb396;
+    background-color: #000000;
+    text-align: justify;
+    width: 1080px;
+	padding: 30px 30px 30px 30px;
+	margin: 0px 30px 0px 30px;
+	min-height: 400px;
+}
+
+.textctr
+{
+    font-size: 13px;
+    font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
+    color: #bdb396;
+    background-color: #000000;
+    text-align: center;
+    width: 1080px;
+	padding: 30px 30px 30px 30px;
+	margin: 0px 30px 0px 30px;
+	min-height: 400px;
+}
+
+.deliveruimage
+{
+	margin: 30px 30px 30px 30px;
+
+}
+
+.gallery
+{
+	float: left;
+}
+
+.thumb img
+{
+	text-align: center;
+	border: 4px solid #c6b37e; /* Рамка вокруг фотографии */
+    padding: 15px; /* Расстояние от картинки до рамки */
+    background: #000; /* Цвет фона */
+    margin-right: 10px; /* Отступ справа */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+
+.bline
+{
+    font-size: 16px;
+    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
+    color: #000;
+    text-align: right;
+    width: 1150;
+	padding: 10px 10px 10px 10px;
+	font-weight: bold;
+	margin-right: 7%;
+}
+
+.guest
+{
+    font-size: 14px;
+    font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
+    color: #d3b046;
+    background-color: #000000;
+    text-align: justify;
+	padding: 10px 10px 10px 10px;
+}
+
+.comment
+{
+    font-size: 13px;
+    font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
+    color: #f3de9d;
+    text-align: justify;
+    width: 1000px;
+	padding: 10px 10px 10px 10px;
+	border: 1px ridge #d3b046;
+	margin: 0px 0px 30px 10px;
+}
+
+.adm
+{
+    font-size: 14px;
+    font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
+    color: #d3b046;
+    background-color: #000000;
+    text-align: justify;
+	padding: 10px 10px 10px 10px;
+	margin: -20px 0px 0px 0px;
+	text-indent: 60px;
+/*	position: relative;
+    left: 70px; */
+}
+
+.admcomment
+{
+    font-size: 13px;
+    font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
+    color: #d3b046;
+    text-align: justify;
+    width: 930px;
+	padding: 10px 10px 10px 10px;
+	border: 1px ridge #d3b046;
+	margin: 0px 0px 30px 0px;
+	position: relative;
+    left: 70px;
+}
+
+.topik
+{
+    font-size: 18px;
+    font-family: TolstoyC, Tahoma, Verdana, Helvetica, Sans-Serif;
+    color: #d3b046;
+    background-color: #000000;
+    text-align: justify;
+	text-indent: 30px;
+	padding: 0px 0px 10px 0px;
+}
+
+.delivery
+{
+    font-size: 13px;
+    font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
+    color: #d3b046;
+    background-color: #000000;
+    text-align: center;
+	padding: 0px 0px 10px 0px;
+
+}
+
+.contacts
+{
+    font-size: 13px;
+    font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
+    color: #d3b046;
+    text-align: center;
+	padding: 10px 10px 10px 10px;
+	margin: 100px 200px 30px 200px;
+/*	border: 1px ridge #d3b046; */
+}
+
+.textbig
+{
+	font-size: 15px;
+    font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
+    text-align: center;
+    color: #d3b046;
+    background-color: #000000;
+}
+
+.ttext
+{
+	font-size: 12px;
+    font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
+    text-align: center;
+    color: #bdb396;
+    background-color: #000000;
+}
+
+.warning
+{
+    font-size: 50px;
+    font-family: TolstoyC, Tahoma, Verdana, Helvetica, Sans-Serif;
+	font-variant: small-caps;
+    color: #003407;
+    text-align: center;
+    width: 100%;
+	padding: 10px 10px 10px 10px;
+	border: 1px ridge #003407;
+	margin: 100px 0px 0px 0px;
+	opacity: 0.6;
+}
+
+.up
+{
+    font-size: 13px;
+    font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
+    color: #bdb396;
+    background-color: #000000;
+    text-align: right;
+    width: 1080px;
+	padding: 15px 30px 15px 30px;
+	margin: 0px 30px 0px 30px;
+	height: 60px;
+}
+
+
+/* Styles for bottom menu link
+-----------------------------------------------------------*/
+A.main-menu
+{
+    font-size: 18px;
+    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
+    color: #f3de9d;
+    text-align: center;
+    padding: 0 15px 0 15px;
+}
+A.main-menu:hover
+{
+    color: #d3b046;
+	text-decoration: none;
+}
+
+A.main-menu:visited
+{
+    color: #f3de9d;
+	text-decoration: none;
+}
+
+
+A.foodmenu
+{
+	font-size: 20px;
+    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
+	color: #f3de9d;
+	text-decoration: none;
+    text-align: center;
+    background-color: #000000;
+	margin-bottom: 50px;
+	text-decoration: overline underline;
+}
+
+
+A.foodmenu:hover
+{
+	font-size: 22px;
+	color: #d3b046;
+	text-decoration: none;
+}
+
+A.foodmenu:visited
+{
+	color: #f3de9d;
+	text-decoration: none;
+}
+
+A.deliverylink
+{
+    font-size: 18px;
+    font-family: Verdana, Helvetica, Sans-Serif;
+    color: #f3de9d;
+    padding: 0 15px 0 15px;
+}
+A.deliverylink:hover
+{
+    color: #d3b046;
+	text-decoration: none;
+}
+
+A.deliverylink:visited
+{
+    color: #f3de9d;
+	text-decoration: none;
+}
+
+
+#right 
+{ 
+	text-align: right;
+}
+
+
+.dropdown-menu>li>a
+{
+	background-color:#962302 !important;
+	background: url("pic/btn.png") repeat scroll 0 0;
+	color: #e9de10 !important;
+}
+
+.dropdown-menu
+{
+	text-decoration: none;
+	background-color:#882002 !important;
+}
+
+A.dropdown-menu:active
+{
+	background-color:#bb2901 !important;
+}
+A.dropdown-menu:hover
+{
+	background-color:#bb2901 !important;
+}
+
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+
+
+.bbanner
+{
+    height: 58px;
+    width: 900px;
+    padding-right: 15px;
+    background: url("pic/bbanner.png"); 
+   }
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
