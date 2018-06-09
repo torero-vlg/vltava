@@ -368,6 +368,7 @@
     <Content Include="Content\leaflet\images\marker-icon.png" />
     <Content Include="Content\leaflet\images\marker-shadow.png" />
     <Content Include="Content\leaflet\leaflet.css" />
+    <Content Include="Content\lightbox\jquery.lightbox-0.5.css" />
     <Content Include="Content\pic\airplan-icon-2x.png" />
     <Content Include="Content\pic\airplan-icon.png" />
     <Content Include="Content\pic\application-pdf.png" />
@@ -383,6 +384,11 @@
     <Content Include="Content\pic\favicon.ico" />
     <Content Include="Content\pic\file-icon.png" />
     <Content Include="Content\pic\image-x-generic.png" />
+    <Content Include="Content\pic\lightbox\close_grey.png" />
+    <Content Include="Content\pic\lightbox\lightbox-blank.gif" />
+    <Content Include="Content\pic\lightbox\lightbox-ico-loading.gif" />
+    <Content Include="Content\pic\lightbox\nextlabel.gif" />
+    <Content Include="Content\pic\lightbox\prevlabel.gif" />
     <Content Include="Content\pic\line_grn.png" />
     <Content Include="Content\pic\line_lgt.png" />
     <Content Include="Content\pic\line_menu.png" />
@@ -507,6 +513,7 @@
     <Content Include="Scripts\app\news\list.js" />
     <Content Include="Scripts\app\t034\t034.dataTables.js" />
     <Content Include="Scripts\app\upload\uploadpartial.js" />
+    <Content Include="Scripts\lang\ru.js" />
     <Content Include="Scripts\lib\bootstrap.js" />
     <Content Include="Scripts\lib\bootstrap.min.js" />
     <Content Include="Scripts\lib\ckeditor\adapters\jquery.js" />
@@ -950,6 +957,7 @@
     <Content Include="Scripts\lib\leaflet-plugins-3.0.0\layer\vector\TOPOJSON.js" />
     <Content Include="Scripts\lib\leaflet.markercluster-1.0.6\leaflet.markercluster.js" />
     <Content Include="Scripts\lib\leaflet\leaflet.js" />
+    <Content Include="Scripts\lib\lightbox\jquery.lightbox-0.5.js" />
     <Content Include="Scripts\lib\modernizr-1.7.js" />
     <Content Include="Scripts\lib\modernizr-1.7.min.js" />
     <Content Include="Scripts\lib\proj4js-2.4.3\proj4.js" />
