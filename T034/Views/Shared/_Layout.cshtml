@@ -46,52 +46,62 @@
     }
         <div class="container">
             <div class="row">
-                <a name="up"></a>
-                <!--	Баннер + логотип + меню для первоначальной загрузки сайта			-->
-                <div class="banner"><img src="@Url.Content("~/Content/pic/banner_full.png")" alt="Баннер" height="200px" width="1400px"></div>
-                <div class="mmenu">
-                    <div class="btn-menu">
-                        <a href="#about" class="main-menu">О нас</a>
+                <div class="col-md-12">
+                    <a name="up"></a>
+                    <!-- Баннер + логотип + меню для первоначальной загрузки сайта -->
+                    <div class="banner">
+                        <img src="@Url.Content("~/Content/pic/banner_full.png")" alt="Баннер">
                     </div>
-                    <div class="btn-menu">
-                        <a href="#foodmenu" class="main-menu">Меню</a>
+                    <div class="mmenu">
+                        <div class="btn-menu">
+                            <a href="#about" class="main-menu">О нас</a>
+                        </div>
+                        <div class="btn-menu">
+                            <a href="#foodmenu" class="main-menu">Меню</a>
+                        </div>
+                        <div class="btn-menu">
+                            <a href="#news" class="main-menu">Новости</a>
+                        </div>
+                        <div class="btn-menu">
+                            <a href="#guests" class="main-menu">Гостевая книга</a>
+                        </div>
+                        <div class="btn-menu">
+                            <a href="#gallery" class="main-menu">Фотогалерея</a>
+                        </div>
+                        <div class="btn-menu">
+                            <a href="#delivery" class="main-menu">Доставка</a>
+                        </div>
+                        <!-- <div class="btn-menu"><a href="#contacts" class="main-menu">Контакты</a></div> -->
+                        <div class="btn-menu">
+                            <a href="#businesslunch" class="main-menu">Бизнес-ланч</a>
+                        </div>
                     </div>
-                    <div class="btn-menu">
-                        <a href="#news" class="main-menu">Новости</a>
+                    <!-- <div class="nobannermenu">
+            <div class="btn-menu"><a href="#about" class="main-menu">О нас</a></div>
+            <div class="btn-menu"><a href="#foodmenu" class="main-menu">Меню</a></div>
+            <div class="btn-menu"><a href="#news" class="main-menu">Новости</a></div>
+            <div class="btn-menu"><a href="#guests" class="main-menu">Гостевая книга</a></div>
+            <div class="btn-menu"><a href="#gallery" class="main-menu">Фотогалерея</a></div>
+            <div class="btn-menu"><a href="#delivery" class="main-menu">Доставка</a></div>
+            <div class="btn-menu"><a href="#businesslunch" class="main-menu">Бизнес-ланч</a></div>
+        </div>
+        -->
+
+                    <div role="alert" class="alert alert-danger" id="errorContainer" style="display: none"></div>
+                    <div role="alert" class="alert alert-success" id="successContainer" style="display: none"></div>
+
+                    @RenderBody()
+
+                    <div class="up">
+                        <a href="#up"><img src="@Url.Content("~/Content/pic/arrow-up.png")" alt="Наверх" title="Наверх"></a>
                     </div>
-                    <div class="btn-menu">
-                        <a href="#guests" class="main-menu">Гостевая книга</a>
+                    <div class="bline">
+                        2018 &copy; Ресторан "Швейк"<a href="@Url.Action("Index", "Home")"></a>
                     </div>
-                    <div class="btn-menu">
-                        <a href="#gallery" class="main-menu">Фотогалерея</a>
                     </div>
-                    <div class="btn-menu">
-                        <a href="#delivery" class="main-menu">Доставка</a>
-                    </div>
-                    <!-- <div class="btn-menu"><a href="#contacts" class="main-menu">Контакты</a></div> -->
-                    <div class="btn-menu">
-                        <a href="#businesslunch" class="main-menu">Бизнес-ланч</a>
-                    </div>
+
                 </div>
-                <!--		<div class="nobannermenu">
-                    <div class="btn-menu"><a href="#about" class="main-menu">О нас</a></div>
-                    <div class="btn-menu"><a href="#foodmenu" class="main-menu">Меню</a></div>
-                    <div class="btn-menu"><a href="#news" class="main-menu">Новости</a></div>
-                    <div class="btn-menu"><a href="#guests" class="main-menu">Гостевая книга</a></div>
-                    <div class="btn-menu"><a href="#gallery" class="main-menu">Фотогалерея</a></div>
-                    <div class="btn-menu"><a href="#delivery" class="main-menu">Доставка</a></div>
-                    <div class="btn-menu"><a href="#businesslunch" class="main-menu">Бизнес-ланч</a></div>
-            </div>
-    -->
 
-                <div role="alert" class="alert alert-danger" id="errorContainer" style="display: none"></div>
-                <div role="alert" class="alert alert-success" id="successContainer" style="display: none"></div>
-
-                @RenderBody()
-
-                <div class="up"><a href="#up"><img src="@Url.Content("~/Content/pic/arrow-up.png")" alt="Наверх" title="Наверх"></a></div>
-                <div class="bline">2018 &copy; Ресторан "Швейк"<a href="@Url.Action("Index", "Home")"></a></div>
-            </div>
         </div>
 
         @*<div class="row">

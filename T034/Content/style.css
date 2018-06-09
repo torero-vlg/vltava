@@ -26,22 +26,21 @@
 }
 
 
-body
-{
+body { 
+    background: url("pic/background.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     font-size: .85em;
     font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
 	color: #232323;
-    background: url("pic/background.jpg") fixed no-repeat !important;
-	align: middle;
 }
 
-.container
-{
-    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
-    width: 1600px; 
+.container{
 	padding: 0 0 0 0;
-/*border: 1px solid #fff;*/
-}
+    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
+}    
 
 .banner
 {
