@@ -10,18 +10,15 @@
                 $(this).hide();
             });
 
-            $('#first_load').show();
-            $('#scroll_menu').hide();
-
+            //отображение меню при прокрутке
             $(document).on("scroll", function () {
-                if ($(document).scrollTop() > 100) {
-                    $('#first_load').hide();
-                    $('#scroll_menu').show();
-                  //  $("header").addClass("shrink");
+                if ($(document).scrollTop() > 199) {
+                    $('#banner').hide();
+                    $("#menu").addClass("smallmenu");
                 }
                 else {
-                    $('#first_load').show();
-                    $('#scroll_menu').hide();
+                    $('#banner').show();
+                    $("#menu").removeClass("smallmenu");
                 }
             });
 

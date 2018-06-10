@@ -48,37 +48,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a name="up"></a>
-                    <!-- Баннер + логотип + меню для первоначальной загрузки сайта -->
-                    <div id="first_load">
-                        <div class="banner">
-                            <img src="@Url.Content("~/Content/pic/banner_full.png")" alt="Баннер">
-                        </div>
-                        <div class="mmenu">
-                            <div class="btn-menu">
-                                <a href="#about" class="main-menu">О нас</a>
-                            </div>
-                            <div class="btn-menu">
-                                <a href="#foodmenu" class="main-menu">Меню</a>
-                            </div>
-                            <div class="btn-menu">
-                                <a href="#news" class="main-menu">Новости</a>
-                            </div>
-                            <div class="btn-menu">
-                                <a href="#guests" class="main-menu">Гостевая книга</a>
-                            </div>
-                            <div class="btn-menu">
-                                <a href="#gallery" class="main-menu">Фотогалерея</a>
-                            </div>
-                            <div class="btn-menu">
-                                <a href="#delivery" class="main-menu">Доставка</a>
-                            </div>
-                            <div class="btn-menu">
-                                <a href="#businesslunch" class="main-menu">Бизнес-ланч</a>
-                            </div>
-                        </div>
+                    <a id="up"></a>
+                    <!-- Баннер + логотип + меню -->
+                    <div class="banner" id="banner">
                     </div>
-                    <div class="nobannermenu" id="scroll_menu">
+                    <div class="mmenu" id="menu">
                         <div class="btn-menu"><a href="#about" class="main-menu">О нас</a></div>
                         <div class="btn-menu"><a href="#foodmenu" class="main-menu">Меню</a></div>
                         <div class="btn-menu"><a href="#news" class="main-menu">Новости</a></div>
@@ -87,7 +61,6 @@
                         <div class="btn-menu"><a href="#delivery" class="main-menu">Доставка</a></div>
                         <div class="btn-menu"><a href="#businesslunch" class="main-menu">Бизнес-ланч</a></div>
                     </div>
-        
 
                     <div role="alert" class="alert alert-danger" id="errorContainer" style="display: none"></div>
                     <div role="alert" class="alert alert-success" id="successContainer" style="display: none"></div>

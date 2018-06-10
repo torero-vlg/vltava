@@ -44,10 +44,15 @@ body {
 
 .banner
 {
+    background-image: url("pic/banner_full.png"); 
     font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
-    width: 1200px;
+    /*width: 1200px;*/
 	height: 200px;
 	padding: 0 0 0 0;
+        -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 /*border: 1px solid #fff;*/
 }
 
@@ -73,16 +78,11 @@ body {
 	margin-bottom: 20px;
 }
 
-.nobannermenu
+.smallmenu
 {
-    font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
-    color: #f3de9d;
-    text-align: justify;
-	width: 1150px;
     height: 110px;
 	padding: 40px 0 5px 250px;
     background: url("pic/banner_sm_1150.png") repeat scroll 0 0;
-	margin-bottom: 20px;
     position: fixed;
 }
 
