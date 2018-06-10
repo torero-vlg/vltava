@@ -45,40 +45,47 @@
     @{
 // Html.RenderPartial("BannerPartialView");
     }
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a id="up"></a>
-                    <!-- Баннер + логотип + меню -->
-                    <div class="banner" id="banner">
-                    </div>
-                    <div class="mmenu" id="menu">
-                        <div class="btn-menu"><a href="#about" class="main-menu">О нас</a></div>
-                        <div class="btn-menu"><a href="#foodmenu" class="main-menu">Меню</a></div>
-                        <div class="btn-menu"><a href="#news" class="main-menu">Новости</a></div>
-                        <div class="btn-menu"><a href="#guests" class="main-menu">Гостевая книга</a></div>
-                        <div class="btn-menu"><a href="#gallery" class="main-menu">Фотогалерея</a></div>
-                        <div class="btn-menu"><a href="#delivery" class="main-menu">Доставка</a></div>
-                        <div class="btn-menu"><a href="#businesslunch" class="main-menu">Бизнес-ланч</a></div>
-                    </div>
-
-                    <div role="alert" class="alert alert-danger" id="errorContainer" style="display: none"></div>
-                    <div role="alert" class="alert alert-success" id="successContainer" style="display: none"></div>
-
-                    @RenderBody()
-
-                    <div class="up">
-                        <a href="#up"><img src="@Url.Content("~/Content/pic/arrow-up.png")" alt="Наверх" title="Наверх"></a>
-                    </div>
-                    <div class="bline">
-                        2018 &copy; Ресторан "Швейк"<a href="@Url.Action("Index", "Home")"></a>
-                    </div>
-                    </div>
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <a id="up"></a>
+            <!-- Баннер + логотип + меню -->
+            <div class="banner" id="banner">
+            </div>
+            <div class="mmenu" id="menu">
+                <div class="btn-menu"><a href="#about" class="main-menu">О нас</a>
                 </div>
+                <div class="btn-menu"><a href="#foodmenu" class="main-menu">Меню</a>
+                </div>
+                <div class="btn-menu"><a href="#news" class="main-menu">Новости</a>
+                </div>
+                <div class="btn-menu"><a href="#guests" class="main-menu">Гостевая книга</a>
+                </div>
+                <div class="btn-menu"><a href="#gallery" class="main-menu">Фотогалерея</a>
+                </div>
+                <div class="btn-menu"><a href="#delivery" class="main-menu">Доставка</a>
+                </div>
+                <div class="btn-menu"><a href="#businesslunch" class="main-menu">Бизнес-ланч</a>
+                </div>
+            </div>
 
+            <div role="alert" class="alert alert-danger" id="errorContainer" style="display: none"></div>
+            <div role="alert" class="alert alert-success" id="successContainer" style="display: none"></div>
+
+            @RenderBody()
+
+            <button onclick="topFunction()" id="btnUp" title="Наверх">
+                <img src="@Url.Content("~/Content/pic/arrow-up.png")" alt="Наверх" title="Наверх">
+            </button>
+
+            <div class="bline">
+                2018 &copy; Ресторан "Швейк"<a href="@Url.Action("Index", "Home")"></a>
+            </div>
         </div>
 
+    </div>
+
+</div>
         @*<div class="row">
             <div class="col-md-1">
             </div>
@@ -107,6 +114,12 @@
         layout.Initialize();
         view.Initialize();
     });
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
         </script>
 
         @RenderSection("scripts", required: false)

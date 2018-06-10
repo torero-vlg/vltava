@@ -20,8 +20,13 @@
                     $('#banner').show();
                     $("#menu").removeClass("smallmenu");
                 }
-            });
 
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    $('#btnUp').show();
+                } else {
+                    $('#btnUp').hide();
+                }
+            });
         },
 
         showResult: function (data) {
