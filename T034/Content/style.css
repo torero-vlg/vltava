@@ -84,6 +84,8 @@ body {
 	padding: 40px 0 5px 250px;
     background: url("pic/banner_sm_1150.png") repeat scroll 0 0;
     position: fixed;
+	margin-top: 20px;
+
 }
 
 .menu
