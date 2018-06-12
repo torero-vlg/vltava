@@ -2,6 +2,14 @@
 <div class="center-block">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span><!--Strips on the button-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse main-menu" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -30,12 +38,6 @@
                         }
                     }
                 </ul>
-                @{
-                    if (Request.Cookies["auth"] == null || string.IsNullOrEmpty(Request.Cookies["auth"].Value))
-                    {
-                        <span class="pull-right"><a href="@Url.Action("Logon", "Account")"><i class="fa fa-sign-in" aria-hidden="true"></i></a></span>
-                    }
-                }
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>

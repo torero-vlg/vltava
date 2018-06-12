@@ -209,6 +209,7 @@
     <Compile Include="Tools\Auth\UserIndentity.cs" />
     <Compile Include="Tools\Auth\UserProvider.cs" />
     <Compile Include="Tools\Auth\YandexAuth.cs" />
+    <Compile Include="Tools\BrowserDetector.cs" />
     <Compile Include="Tools\HttpTools.cs" />
     <Compile Include="Tools\SerializeTools.cs" />
     <Compile Include="ViewModel\FirstUserViewModel.cs" />
@@ -413,6 +414,8 @@
     <Content Include="Content\pic\x-office-document.png" />
     <Content Include="Content\pic\xml-icon.png" />
     <Content Include="Content\pic\yandex_icon.png" />
+    <Content Include="Content\style_t.css" />
+    <Content Include="Content\style_m.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />

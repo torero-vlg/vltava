@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using T034.Tools
+<!DOCTYPE html>
 <html>
     <head>
         <title>@ViewBag.Title</title>
@@ -13,7 +14,21 @@
         @{
             if (Request.Cookies["style"] == null)
             {
-                <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" type="text/css"/>
+
+                if (!BrowserDetector.IsMobile() && !BrowserDetector.IsTablet())
+                {
+                    <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" type="text/css"/>
+                }
+
+                if (BrowserDetector.IsMobile())
+                {
+                    <link href="@Url.Content("~/Content/style_m.css")" rel="stylesheet" type="text/css" />
+                }
+
+                if (BrowserDetector.IsTablet())
+                {
+                    <link href="@Url.Content("~/Content/style_t.css")" rel="stylesheet" type="text/css" />
+                }
             }
             else
             {
