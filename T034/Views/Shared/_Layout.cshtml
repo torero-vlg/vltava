@@ -12,38 +12,19 @@
         <link rel="icon" type="image/png" href="@Url.Content("~/Content/pic/favicon.ico")"/>
 
         @{
-            if (Request.Cookies["style"] == null)
+            //if (!BrowserDetector.IsMobile() && !BrowserDetector.IsTablet())
             {
-
-                if (!BrowserDetector.IsMobile() && !BrowserDetector.IsTablet())
-                {
-                    <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" type="text/css"/>
-                }
-
-                if (BrowserDetector.IsMobile())
-                {
-                    <link href="@Url.Content("~/Content/style_m.css")" rel="stylesheet" type="text/css" />
-                }
-
-                if (BrowserDetector.IsTablet())
-                {
-                    <link href="@Url.Content("~/Content/style_t.css")" rel="stylesheet" type="text/css" />
-                }
+                <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" type="text/css"/>
             }
-            else
+
+            if (BrowserDetector.IsMobile())
             {
-                switch (Request.Cookies["style"].Value)
-                {
-                    case "BlackSpecial":
-                        <link href="@Url.Content("~/Content/blackspecial.css")" rel="stylesheet" type="text/css"/>
-                        break;
-                    case "WhiteSpecial":
-                        <link href="@Url.Content("~/Content/whitespecial.css")" rel="stylesheet" type="text/css" />
-                        break;
-                    default:
-                        <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" type="text/css"/>
-                        break;
-                }
+                <link href="@Url.Content("~/Content/style_m.css")" rel="stylesheet" type="text/css" />
+            }
+
+            if (BrowserDetector.IsTablet())
+            {
+                <link href="@Url.Content("~/Content/style_t.css")" rel="stylesheet" type="text/css" />
             }
         }
 
@@ -67,6 +48,9 @@
             <!-- Баннер + логотип + меню -->
             <div class="banner" id="banner">
             </div>
+            @{
+               // Html.RenderAction("MainMenu", "Navigation");
+            }
             <div class="mmenu" id="menu">
                 <div class="btn-menu"><a href="#about" class="main-menu">О нас</a>
                 </div>
