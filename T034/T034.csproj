@@ -32,6 +32,7 @@
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1016,6 +1017,7 @@
     <Content Include="fonts\TolstoyC.eot" />
     <Content Include="fonts\TolstoyC.ttf" />
     <Content Include="fonts\TolstoyC.woff" />
+    <Content Include="Content\bootstrap.custom.css" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_SelectorLayout.cshtml" />
     <Content Include="Views\Upload\Export.cshtml" />

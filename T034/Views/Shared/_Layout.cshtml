@@ -1,37 +1,38 @@
 ﻿@using T034.Tools
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>@ViewBag.Title</title>
-        <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
-        <link href="@Url.Content("~/Content/bootstrap-theme.min.css")" rel="stylesheet" type="text/css" />
-        <link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="stylesheet" type="text/css" />
-        <link href="@Url.Content("~/Content/font-awesome.min.css")" rel="stylesheet" type="text/css" />
-        <link href="@Url.Content("~/Content/DataTables-1.10.2/media/css/jquery.dataTables.min.css")" rel="stylesheet" type="text/css" />
-        <link href="@Url.Content("~/Content/lightbox/jquery.lightbox-0.5.css")" rel="stylesheet" type="text/css" />
-        <link rel="icon" type="image/png" href="@Url.Content("~/Content/pic/favicon.ico")"/>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap-theme.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/DataTables-1.10.2/media/css/jquery.dataTables.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/lightbox/jquery.lightbox-0.5.css")" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="@Url.Content("~/Content/pic/favicon.ico")" />
 
-        @{
-            //if (!BrowserDetector.IsMobile() && !BrowserDetector.IsTablet())
-            {
-                <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" type="text/css"/>
-            }
-
-            if (BrowserDetector.IsMobile())
-            {
-                <link href="@Url.Content("~/Content/style_m.css")" rel="stylesheet" type="text/css" />
-            }
-
-            if (BrowserDetector.IsTablet())
-            {
-                <link href="@Url.Content("~/Content/style_t.css")" rel="stylesheet" type="text/css" />
-            }
+    @{
+        //if (!BrowserDetector.IsMobile() && !BrowserDetector.IsTablet())
+        {
+            <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/Content/bootstrap.custom.css")" rel="stylesheet" type="text/css" />
         }
 
-        <script src="/Scripts/require.js"></script>
-        <script src="/Scripts/main.js"></script>
+        if (BrowserDetector.IsMobile())
+        {
+            <link href="@Url.Content("~/Content/style_m.css")" rel="stylesheet" type="text/css" />
+        }
 
-    </head>
+        if (BrowserDetector.IsTablet())
+        {
+            <link href="@Url.Content("~/Content/style_t.css")" rel="stylesheet" type="text/css" />
+        }
+    }
+
+    <script src="/Scripts/require.js"></script>
+    <script src="/Scripts/main.js"></script>
+
+</head>
 
 <body>
 
