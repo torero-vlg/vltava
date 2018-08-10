@@ -65,14 +65,11 @@ body {
     z-index: 999;
 }
 
-.smallmenu
-{
+.smallmenu {
     height: 110px;
-	padding: 40px 0 5px 250px;
-    background: url("pic/banner_sm_1150.png") repeat scroll 0 0;
+    padding: 25px 0 5px 0px;
+    background: url("pic/banner_sm_1150.png") scroll 0 0;
     position: fixed;
-	margin-top: 20px;
-
 }
 
 .menu
