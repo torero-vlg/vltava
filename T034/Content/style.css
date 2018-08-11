@@ -45,7 +45,6 @@ body {
 
 .main_img
 {
-    width: 1150px;
 	height: 767px;
 	padding: 0 0 0 0;
 	margin-top: -20px;
@@ -57,7 +56,6 @@ body {
     font-family: TolstoyC, Verdana, Helvetica, Sans-Serif;
     color: #f3de9d;
     text-align: justify;
-	width: 1150px;
     height: 45px;
 	padding: 5px 0 5px 250px;
     background: url("pic/line_menu_1150.png") repeat scroll 0 0;
@@ -76,7 +74,6 @@ body {
 {
     color: #f3de9d;
     text-align: justify;
-	width: 1080px;
     height: 45px;
     position: relative; /* Абсолютное позиционирование */
     left: 270px; /* Положение от нижнего края */
@@ -109,7 +106,6 @@ body {
     background: url("pic/line_lgt.png") repeat scroll 0 0 #fff;
 	text-align: justify;
 	text-indent: 100px;
-    width: 1150px;
     height: 70px;
     padding: 15px 10px 10px 10px;
 	opacity: 0.75;
@@ -124,7 +120,6 @@ body {
     background: url("pic/line_grn.png") repeat scroll 0 0 #fff;
 	text-align: justify;
 	text-indent: 100px;
-    width: 1150px;
     height: 70px;
     padding: 15px 10px 10px 10px;
 }
@@ -136,7 +131,6 @@ body {
     color: #bdb396;
     background-color: #000000;
     text-align: justify;
-    width: 1080px;
 	padding: 30px 30px 30px 30px;
 	margin: 0px 30px 0px 30px;
 	min-height: 400px;
@@ -149,7 +143,6 @@ body {
     color: #bdb396;
     background-color: #000000;
     text-align: center;
-    width: 1080px;
 	padding: 30px 30px 30px 30px;
 	margin: 0px 30px 0px 30px;
 	min-height: 400px;
@@ -183,7 +176,6 @@ body {
     color: #f3de9c;
     background: url("pic/bline.png") repeat scroll 0 0;
     text-align: right;
-    width: 1150px;
     height: 45px;
     padding: 8px 50px 0px 10px;
 }
@@ -222,7 +214,6 @@ A.abline:visited
     font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
     color: #f3de9d;
     text-align: justify;
-    width: 1000px;
 	padding: 10px 10px 10px 10px;
 	border: 1px ridge #d3b046;
 	margin: 0px 0px 30px 10px;
@@ -248,7 +239,6 @@ A.abline:visited
     font-family: Tahoma, Verdana, Helvetica, Sans-Serif;
     color: #d3b046;
     text-align: justify;
-    width: 930px;
 	padding: 10px 10px 10px 10px;
 	border: 1px ridge #d3b046;
 	margin: 0px 0px 30px 0px;

@@ -14,6 +14,9 @@
 	.navbar .navbar-brand {
 		color: #d3b046;
 	}
+    .dark-pink-text {
+    color: #fad050;
+}
 
 		.navbar .navbar-brand:hover,
 		.navbar .navbar-brand:focus {
@@ -76,7 +79,7 @@
 	}
 
 	.navbar .navbar-toggle {
-		border-color: #000000;
+		border-color: #fad050;
 	}
 
 		.navbar .navbar-toggle:hover,
