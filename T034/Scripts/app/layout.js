@@ -11,18 +11,18 @@
             });
 
             //отображение меню при прокрутке
-            $(document).on("scroll", function (eventArgs) {
-                console.log($(document).scrollTop());
-             //   $('.navbar-fixed-top').css('top', 200 - $(document).scrollTop());
+            $(document).on("scroll", function () {
 
                 if ($(document).scrollTop() > 199) {
                     $('#banner').hide();
-                  //  $("#menu").addClass("smallmenu");
-                    $('.navbar-fixed-top').css('top', 0);
+                    $('nav').addClass('navbar-fixed-top');
+                    $('#bs-example-navbar-collapse-1').addClass('navbar-fixed-top');
+
                 }
                 else {
                     $('#banner').show();
-                    $('.navbar-fixed-top').css('top', 200 - $(document).scrollTop());
+                    $('nav').removeClass('navbar-fixed-top');
+                    $('#bs-example-navbar-collapse-1').removeClass('navbar-fixed-top');
                 }
 
                 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
