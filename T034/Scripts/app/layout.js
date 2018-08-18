@@ -31,6 +31,30 @@
                     $('#btnUp').hide();
                 }
             });
+
+            $('.main-menu').on("click", function (e) {
+                var targetName = e.currentTarget.hash.replace('#', '');
+                var targerElement = $('a[name=' + targetName + ']');
+                var top = targerElement[0].offsetTop;
+
+                var menuHeight = 0;
+                var bannerHeight = 0;
+                if ($('.navbar').length > 0) {
+                    menuHeight = $('.navbar')[0].clientHeight;
+                }
+                if ($('.banner').length > 0) {
+                    bannerHeight = $('.banner')[0].clientHeight;
+                }
+                var scroll = menuHeight + bannerHeight;
+                if (bannerHeight > 0)
+                    scroll += menuHeight;
+                $('html, body').animate({ scrollTop: top - scroll }, 700);
+
+
+                console.log(menuHeight);
+                console.log(bannerHeight);
+ 
+            });
         },
 
         showResult: function (data) {
