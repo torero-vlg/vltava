@@ -26,7 +26,11 @@ a.main-menu
 
 .text
 {
-	font-size: 24px;
+	font-size: 30px;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .comment,.admcomment
@@ -37,12 +41,4 @@ a.main-menu
 .guest,.adm
 {
 	font-size: 20px;
-}
-
-@media (min-width: 768px) {
-    .container {
-        width:750px;
-        margin-right: 0px;
-        margin-left: 0px;
-    }
 }
