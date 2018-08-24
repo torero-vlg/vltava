@@ -37,6 +37,7 @@
                 var targerElement = $('a[name=' + targetName + ']');
                 var top = targerElement[0].offsetTop;
 
+                //прокрутка с учётом фиксированного меню и баннера
                 var menuHeight = 0;
                 var bannerHeight = 0;
                 if ($('.navbar').length > 0) {
@@ -49,10 +50,6 @@
                 if (bannerHeight > 0)
                     scroll += menuHeight;
                 $('html, body').animate({ scrollTop: top - scroll }, 700);
-
-
-                console.log(menuHeight);
-                console.log(bannerHeight);
  
             });
         },
