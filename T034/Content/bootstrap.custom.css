@@ -4,11 +4,10 @@
 
 .navbar {
     background-color: black;
-    border-color: #fad050;
-    border-radius: 0px;
-    border-width: 3px;
+    opacity: 0.6;
     width: 80%;
     margin: auto;
+    border: 2px solid #f3de9d;
 }
 
 	.navbar .navbar-brand {
