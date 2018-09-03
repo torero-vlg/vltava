@@ -402,6 +402,7 @@
     <Content Include="Content\pic\logov2.png" />
     <Content Include="Content\pic\logo_delivery.png" />
     <Content Include="Content\pic\logo_parohot.png" />
+    <Content Include="Content\pic\logo_sm.png" />
     <Content Include="Content\pic\logo_vkusgoroda.png" />
     <Content Include="Content\pic\lowvision.png" />
     <Content Include="Content\pic\mailru_icon.png" />
