@@ -111,21 +111,51 @@
 
 <div class="headerlgt"><a name="gallery"></a>Фотогалерея</div>
 <div class="textctr">
-    <div class="topik">23 февраля 2017 года</div>
-    <div class="thumb">
-        <a href="@Url.Content("~/Content/images/guests/photo05.jpg")" rel="lightbox_230217"><img src="@Url.Content("~/Content/images/guests/photo05sm.jpg")" alt="" width="220" class="thumb"></a>
-        <a href="@Url.Content("~/Content/images/guests/photo06.jpg")" rel="lightbox_230217"><img src="@Url.Content("~/Content/images/guests/photo06sm.jpg")" alt="" width="220" class="thumb"></a>
-        <a href="@Url.Content("~/Content/images/guests/photo07.jpg")" rel="lightbox_230217"><img src="@Url.Content("~/Content/images/guests/photo07sm.jpg")" alt="" width="220" class="thumb"></a>
-        <a href="#gallery"><img src="@Url.Content("~/Content/pic/arrow-more.png")" alt="Фотогалерея" title="Перейти в Фотогалерею" width="70"></a>
-    </div>
 
     <p class="thumb"></p>
-    <div class="topik">Фестиваль пива 2016 года</div>
+    <div class="topik">Фестиваль пива 2016</div>
     <div class="thumb">
         <a href="@Url.Content("~/Content/images/guests/photo13.jpg")" rel="lightbox_2016"><img src="@Url.Content("~/Content/images/guests/photo13sm.jpg")" alt="" width="220"></a>
         <a href="@Url.Content("~/Content/images/guests/photo14.jpg")" rel="lightbox_2016"><img src="@Url.Content("~/Content/images/guests/photo14sm.jpg")" alt="" width="220"></a>
         <a href="@Url.Content("~/Content/images/guests/photo15.jpg")" rel="lightbox_2016"><img src="@Url.Content("~/Content/images/guests/photo15sm.jpg")" alt="" width="220"></a>
-        <a href="#gallery"><img src="@Url.Content("~/Content/pic/arrow-more.png")" alt="Фотогалерея" title="Перейти в Фотогалерею" width="70"></a>
+        <a href="@Url.Content("~/Content/images/guests/photo16.jpg")" rel="lightbox_2016"><img src="@Url.Content("~/Content/pic/arrow-more.png")" alt="Фотогалерея" title="Перейти в Фотогалерею" width="70"></a>
+    </div>
+
+    <div class="topik">23 февраля 2017</div>
+    <div class="thumb">
+        <a href="@Url.Content("~/Content/images/guests/photo05.jpg")" rel="lightbox_230217"><img src="@Url.Content("~/Content/images/guests/photo05sm.jpg")" alt="" width="220" class="thumb"></a>
+        <a href="@Url.Content("~/Content/images/guests/photo06.jpg")" rel="lightbox_230217"><img src="@Url.Content("~/Content/images/guests/photo06sm.jpg")" alt="" width="220" class="thumb"></a>
+        <a href="@Url.Content("~/Content/images/guests/photo07.jpg")" rel="lightbox_230217"><img src="@Url.Content("~/Content/images/guests/photo07sm.jpg")" alt="" width="220" class="thumb"></a>
+        <a href="@Url.Content("~/Content/images/guests/photo08.jpg")" rel="lightbox_230217"><img src="@Url.Content("~/Content/pic/arrow-more.png")" alt="Фотогалерея" title="Перейти в Фотогалерею" width="70"></a>
+    </div>
+
+    <p class="thumb"></p>
+    <div class="topik">Октоберфест 2018</div>
+    <div class="thumb">
+        @{
+            var folder = "/Content/images/octoberfest2018/";
+            var physicalPath = Server.MapPath(folder);
+            var directory = new DirectoryInfo(physicalPath);
+            IEnumerable<string> files;
+            try
+            {
+                files = directory.GetFiles().Select(f => f.Name).Where(f => f.Contains("sm.jpg"));
+            }
+            catch (Exception ex)
+            {
+                files = new string[1];
+            }
+            for (var i = 0; i < files.Count(); i++)
+            {
+                var display = i > 2 ? "display: none;" : "";
+                <a href="@Url.Content(folder + files.ToList()[i].Replace("sm.jpg", ".jpg"))" rel="octoberfest2018" style="@display">
+                    <img src="@Url.Content("~" + folder + files.ToList()[i])" alt="" width="220">
+                </a>
+            }
+        }
+        <a href="@Url.Content(folder + files.ToList()[3].Replace("sm.jpg", ".jpg"))" rel="octoberfest2018">
+            <img src="@Url.Content("~/Content/pic/arrow-more.png")" alt="Фотогалерея" title="Перейти в Фотогалерею" width="70">
+        </a>
     </div>
 </div>
 
