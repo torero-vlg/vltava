@@ -13,10 +13,13 @@
                                       <!-- Collect the nav links, forms, and other content for toggling -->
                                       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                           <ul class="nav navbar-nav">
-                                              @{
-                                                  foreach (var menuItem in Model)
-                                                  {
-                                                      <li class="dropdown @menuItem.Active">
+                                              <li class="dropdown">
+                                                  <img src="@Url.Content("~/Content/pic/logo_sm.png")">
+                                              </li>
+                                                  @{
+                                                      foreach (var menuItem in Model)
+                                                      {
+                                                        <li class="dropdown @menuItem.Active">
                                                           @if (menuItem.Url == "#")
                                                           {
                                                               <a href="@menuItem.Url" class="dropdown-toggle main-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@menuItem.Title</a>
